@@ -42,7 +42,7 @@ func main() {
 		}
 	}
 
-	nmapmap := nmap.DoListNmapdata(subnetmap, opt.Verbose)
+	nmapmap := nmap.Nmap(subnetmap, opt.Verbose)
 	if true {
 		ostr += fmt.Sprintf("box,%s\n", nmap.Header())
 		strs := genutil.SortedUniqueKeys(nmap.Keys_String2PtrNmapdata(&nmapmap))
